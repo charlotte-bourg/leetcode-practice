@@ -14,4 +14,3 @@ class Solution:
             else:
                 lst = nums[i]
                 count = 1
-        return 1
