@@ -21,10 +21,4 @@ class Solution:
                 matrix[r][c], matrix[r][n-c-1] = matrix[r][n-c-1], matrix[r][c]
 
         
-
 # equivalent operations to rotating clockwise: transpose across diagonal axis then reflect across vertical axis 
-
-# transpose example operations:
-# 0,0 <> n-1,n-1
-# r = 0, c = 3 <> r = , c = n - c - 1 
-# r = 0, c = 3 
