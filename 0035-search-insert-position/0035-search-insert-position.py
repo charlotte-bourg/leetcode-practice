@@ -3,8 +3,7 @@ class Solution:
         low = 0
         high = len(nums) - 1
         while low <= high:
-            mid = low + int((high - low) / 2) # floor -> if low and high are 1 apart, mid will never become high
-            # print(f"{low} {mid} {high}")
+            mid = low + int((high - low) / 2)
             if nums[mid] == target:
                 return mid
             if nums[mid] > target:
