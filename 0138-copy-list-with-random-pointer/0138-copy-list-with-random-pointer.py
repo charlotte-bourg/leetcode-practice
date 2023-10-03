@@ -13,22 +13,17 @@ class Solution:
         if not head:
             return None
         currOld = head
-        oldLst = []
         oldToNew = {}
-        # traverse to end of existing linked list 
+        preNewHead = Node(0, None, None)
+        prevNew = preNewHead
+        # construct new list with just .next
         while currOld:
-            oldLst.append(currOld)
-            currOld = currOld.next
-        newLst = []
-        prevNew = None
-        # construct new linked list from back to front with just .next
-        while oldLst: 
-            currOld = oldLst.pop()
-            currNew = Node(currOld.val, prevNew)
+            currNew = Node(currOld.val, None, None)
             oldToNew[currOld] = currNew
-            newLst.append(currNew)
+            currOld = currOld.next
+            prevNew.next = currNew
             prevNew = currNew
-        newHead = currNew
+        currNew = preNewHead.next
         currOld = head
         # fill in .random
         while currNew:
@@ -38,6 +33,6 @@ class Solution:
                 currNew.random = oldToNew[currOld.random]
             currNew = currNew.next
             currOld = currOld.next
-        return newHead
+        return preNewHead.next
         
             
