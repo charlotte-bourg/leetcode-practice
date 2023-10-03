@@ -28,3 +28,5 @@ class Solution:
         if insStart != 10 ** 5 + 1:
             intervals.insert(insLoc, [insStart, insEnd])
         return intervals 
+
+# todo binary search
