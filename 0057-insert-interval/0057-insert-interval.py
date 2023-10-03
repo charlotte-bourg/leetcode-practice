@@ -14,7 +14,6 @@ class Solution:
         i = 0 
         while i < len(intervals):
             if i <= len(intervals) - 1:
-                print(f"{newInterval[0]} {intervals[i][1]}")
                 if newInterval[0] > intervals[i][1] and newInterval[1] < intervals[i+1][0]:
                     intervals.insert(i+1, newInterval)
                     return intervals
